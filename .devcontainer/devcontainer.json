@@ -27,6 +27,10 @@
             ]
         }
     },
+    "forwardPorts": [
+        5173,
+        54321
+    ],
     "remoteUser": "root",
     "workspaceFolder": "/workspaces/supabase-codespace-cors",
     "features": {

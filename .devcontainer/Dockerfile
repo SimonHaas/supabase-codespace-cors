@@ -11,4 +11,4 @@ RUN apt-get update && \
     echo '#!/bin/bash' >> /usr/bin/supabase && \
     echo 'npx supabase "$@"' >> /usr/bin/supabase && \
     chmod +x /usr/bin/supabase && \
-    npx --yes supabase && \
+    npx --yes supabase
