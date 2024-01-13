@@ -12,5 +12,3 @@ RUN apt-get update && \
     echo 'npx supabase "$@"' >> /usr/bin/supabase && \
     chmod +x /usr/bin/supabase && \
     npx --yes supabase && \
-    echo 'eval "$(direnv hook bash)"' >> ~/.bashrc && \
-    echo 'eval "$(direnv hook bash)"' >> ~/.bash_profile

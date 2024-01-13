@@ -4,15 +4,33 @@
 
 console.log("Hello from Functions!")
 
-Deno.serve(async (req) => {
-  const { name } = await req.json()
-  const data = {
-    message: `Hello ${name}!`,
+Deno.serve((req) => {
+  if (req.method === 'OPTIONS') {
+    console.log('inside OPTIONS');
+    return new Response('ok', {
+      headers: {
+        'Access-Control-Allow-Credentials': 'true',
+        'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type, X-Github-Token',
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json'
+      }
+    });
   }
 
+  console.log('inside GET');
+
   return new Response(
-    JSON.stringify(data),
-    { headers: { "Content-Type": "application/json" } },
+    JSON.stringify({
+      message: `Hello world!`,
+    }),
+    {
+      headers: {
+        'Access-Control-Allow-Credentials': 'true',
+        'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type, X-Github-Token',
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json'
+      }
+    },
   )
 })
 

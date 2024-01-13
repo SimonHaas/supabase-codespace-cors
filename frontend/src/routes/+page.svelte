@@ -1,2 +1,7 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+  fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/hello-world`, {
+    headers: {
+      "X-Github-Token": import.meta.env.VITE_GITHUB_TOKEN,
+    },
+  });
+</script>
