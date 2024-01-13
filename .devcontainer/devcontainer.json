@@ -10,8 +10,13 @@
                 "editor.formatOnSaveMode": "file",
                 "files.autoSave": "onFocusChange",
                 "deno.enablePaths": [
-                    "./supabase"
+                    "supabase/functions"
                 ],
+                "deno.lint": true,
+                "deno.unstable": true,
+                "[typescript]": {
+                    "editor.defaultFormatter": "denoland.vscode-deno"
+                },
                 "deno.cacheOnSave": true,
                 "editor.linkedEditing": true
             },
