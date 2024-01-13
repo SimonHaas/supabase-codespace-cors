@@ -1,0 +1,30 @@
+{
+    "name": "dev",
+    "dockerFile": "Dockerfile",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "editor.formatOnPaste": false,
+                "editor.formatOnType": false,
+                "editor.formatOnSave": true,
+                "editor.formatOnSaveMode": "file",
+                "files.autoSave": "onFocusChange",
+                "deno.enablePaths": [
+                    "./supabase"
+                ],
+                "deno.cacheOnSave": true,
+                "editor.linkedEditing": true
+            },
+            "extensions": [
+                "ms-azuretools.vscode-docker",
+                "denoland.vscode-deno",
+                "svelte.svelte-vscode"
+            ]
+        }
+    },
+    "remoteUser": "root",
+    "workspaceFolder": "/workspaces/supabase-codespace-cors",
+    "features": {
+        "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+    }
+}
